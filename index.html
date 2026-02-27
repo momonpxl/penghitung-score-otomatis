@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="style.css">
+    <title>SCOR·POINT // SCRIM CALCULATOR + EXPORT CSV</title>
+</head>
+<body>
+<div class="bg-noise"></div>
+<div class="floating-shape shape-1"></div>
+<div class="floating-shape shape-2"></div>
+
+<div class="marquee-top">
+    <div class="marquee-content">⚡ SCRIM POINT SYSTEM v1.2 // EXPORT CSV (TABEL) // TOXIC LIME EDITION ⚡</div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="brand-box">
+        <span class="brand-icon">⏣</span>
+        <span class="brand-text">SCOR·POINT</span>
+        <span class="version-tag">CSV</span>
+    </div>
+    <div class="status-badge">
+        <span class="dot"></span> <span>LIVE</span>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="cyber-card">
+        <div class="screw top-left">⬤</div>
+        <div class="screw top-right">⬤</div>
+        <div class="screw bottom-left">⬤</div>
+        <div class="screw bottom-right">⬤</div>
+
+        <div class="card-header-visual">
+            <div class="profile-section">
+                <div class="avatar-img">🎯</div>
+                <div class="profile-info">
+                    <span class="user-role">SCRIM MASTER</span>
+                    <span class="user-action">INPUT DATA</span>
+                </div>
+            </div>
+            <div class="decor-lines">{[--]}</div>
+        </div>
+
+        <div class="card-body">
+            <div class="row-duo">
+                <div class="input-wrapper">
+                    <label class="input-label">EVENT NAME</label>
+                    <input type="text" id="eventName" class="cyber-input" placeholder="e.g. WEEKLY SCRIM" value="WEEKLY SCRIM">
+                </div>
+                <div class="input-wrapper">
+                    <label class="input-label">DATE</label>
+                    <input type="date" id="eventDate" class="cyber-input" value="2025-04-10">
+                </div>
+            </div>
+            <div class="row-duo">
+                <div class="input-wrapper">
+                    <label class="input-label">ORGANIZER</label>
+                    <input type="text" id="organizer" class="cyber-input" placeholder="ORG" value="SANN404">
+                </div>
+                <div class="input-wrapper">
+                    <label class="input-label">CREATOR</label>
+                    <input type="text" id="creator" class="cyber-input" placeholder="YOUR NAME" value="OPERATOR">
+                </div>
+            </div>
+
+            <div class="point-settings-grid" id="pointPanel">
+            </div>
+            <button class="reset-btn" id="resetPointsBtn">↻ RESET DEFAULTS</button>
+
+            <div style="margin-top: 25px;">
+                <label class="input-label">TEAMS (add / remove)</label>
+                <div id="teamListContainer" class="team-list"></div>
+                <button class="add-btn" id="addTeamBtn">+ ADD TEAM</button>
+            </div>
+
+            <div style="margin-top: 25px;">
+                <label class="input-label">NUMBER OF MATCHES</label>
+                <input type="number" id="matchCount" class="cyber-input" min="1" value="2" style="width: 120px;">
+            </div>
+
+            <div id="matchTablesArea" class="match-tables-container"></div>
+
+            <div class="button-group">
+                <button class="cyber-button" id="calculateBtn">⚡ HITUNG SCOR ⚡</button>
+                <button class="cyber-button" id="exportCsvBtn" style="background: var(--accent-primary); color: white;">📊 EXPORT CSV (TABEL)</button>
+            </div>
+
+            <div id="resultsArea" style="margin-top: 30px;"></div>
+        </div>
+    </div>
+
+    <div class="footer-line"></div>
+    <div style="text-align: center; font-family: monospace;">⚙️ <span class="sann-highlight">MOON404 // CSV EXPORT READY</span> ⚙️</div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
